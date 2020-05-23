@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <TextView
+        android:id="@+id/text_froyo_desc"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:text="@string/froyo_is_premium_self_serve_frozen_yorgut"
+        android:textColor="#0B0A0A"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/image_froyo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_froyo"
+        app:layout_constraintTop_toBottomOf="@+id/image_ice_cream" />
+
+    <TextView
+        android:id="@+id/text_icecream_desc"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/icecream_are_glazed_and_sprinkled_with_candy"
+        android:textColor="#0B0A0A"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/image_ice_cream"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_ice_cream"
+        app:layout_constraintTop_toBottomOf="@+id/image_donut"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <TextView
+        android:id="@+id/text_donut_desc"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/donuts_are_glazed_and_sprinkled_with_candy"
+        android:textColor="#0B0A0A"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/image_donut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_donut"
+        app:layout_constraintTop_toTopOf="@+id/image_donut" />
+
+    <TextView
+        android:id="@+id/text_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Droid Dessert"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_choose_dessert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Choose Dessert"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_intro"
+        app:layout_constraintStart_toStartOf="@+id/text_intro"
+        app:layout_constraintTop_toBottomOf="@+id/text_intro" />
+
+    <ImageView
+        android:id="@+id/image_donut"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:onClick="showDonutMessage"
+        android:contentDescription="Donuts are glazed and sprinkled with candy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_choose_dessert"
+        app:srcCompat="@drawable/donut" />
+
+    <ImageView
+        android:id="@+id/image_ice_cream"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/icecream_are_glazed_and_sprinkled_with_candy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_donut"
+        android:onClick="showIcecreamMessage"
+        app:srcCompat="@drawable/ice_cream"
+        />
+
+    <ImageView
+        android:id="@+id/image_froyo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        android:onClick="showFroyoMessage"
+        android:contentDescription="@string/froyo_is_premium_self_serve_frozen_yorgut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_ice_cream"
+        app:srcCompat="@drawable/froyo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
